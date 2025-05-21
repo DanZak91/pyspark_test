@@ -4,8 +4,8 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("SQLAPIExample").getOrCreate()
 
 # Чтение данных из JSON файлов
-people_df = spark.read.json("people_SQLAPI.json")
-departments_df = spark.read.json("departments__SQLAPI.json")
+people_df = spark.read.json("jsons\people_SQLAPI.json")
+departments_df = spark.read.json("jsons\departments__SQLAPI.json")
 
 # Регистрация DataFrame как временные таблицы
 people_df.createOrReplaceTempView("people")

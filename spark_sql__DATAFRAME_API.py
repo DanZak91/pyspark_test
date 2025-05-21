@@ -10,7 +10,7 @@ findspark.init()
 spark = SparkSession.builder.appName("DataFrameAPIExample").getOrCreate()
 
 # Чтение данных из JSON файла
-df = spark.read.json("people_data.json")
+df = spark.read.json("jsons\people_data.json")
 
 # Фильтрация данных
 filtered_df = df.filter(col("age") > 30)
